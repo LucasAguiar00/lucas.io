@@ -1,0 +1,42 @@
+@import "compass/css3";
+
+body{    
+    text-align: center;    
+    background-image: url('login2.png'); 
+    background-color: brown;
+}
+
+.celula_atendimento{
+    text-align: center;
+    margin: 5px;
+    box-sizing: border-box;    
+}
+
+.butao{    
+   margin: 4px 1em 2px 0px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.466);     
+}
+
+#Descricao{    
+    height: 100px;
+    width: 800px;    
+}
+
+#Protocolo_Chat{
+    position: initial;
+    right: 90%;
+}
+
+
+h1{    
+    text-align: center;
+}
+
+.formulario{
+    border: 2px solid rgb(0, 0, 0);    
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.466);    
+}
+
+#add_1{
+    right: 10%;
+}
