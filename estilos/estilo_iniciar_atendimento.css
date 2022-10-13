@@ -12,23 +12,32 @@ body{
     color: rgb(255, 255, 255);
 }
 
+#cronometro{
+    text-align: right;
+    font-size: 18pt;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 4px;
+    text-decoration: overline rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
 #atendimento{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(-50%, -50%);
     display: block;
     align-items: center;
-    border: 4px solid blue;
-    border-left: 40%;
+/*    border: 2px solid rgb(238, 255, 0);*/
+
 }
 
-#botoes{
-    position: absolute;
-    left: 70%;
-    top: 110%;
-    display: block;
-    align-items: center;
+.campo{
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
 #cadastro{
@@ -36,5 +45,38 @@ body{
 }
 
 #bfp{
+    width: 100%;
+}
+
+#contato{
+    width: 68%;
+}
+
+#numero{
+    position: absolute;
+    right: 0%;
+}
+
+#protocolos{
+    position: absolute;
+    right: 0%;
+}
+
+#classificação{
+    position: absolute;
+    left: 0%;
+    top: 115%;
+}
+
+#botoes{    
+    position: absolute;
+    right: 0%;
+    top: 200%;
+}
+
+#classificacao_1{
+    width: 100%;
+}
+#classificacao_2_{
     width: 100%;
 }

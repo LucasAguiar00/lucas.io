@@ -16,12 +16,15 @@ body{
     font-size: 16pt;
     height: 25px;
     margin: 8px;
+    border-radius: 10px;
+    padding-left: 10px;
 }
 #senha{
-
     font-size: 16pt;
     height: 25px;
     margin: 8px;
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
 #saudacao{

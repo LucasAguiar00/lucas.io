@@ -8,7 +8,7 @@ function login(){
 
     //usuário admin
     if ((usuario=="admin")&&(senha=="admin")){
-        window.alert("Login realizado com sucesso")
+        //window.alert("Login realizado com sucesso")
 
         //Salva o nome do usuário
         localStorage.setItem('valueText', usuario);
