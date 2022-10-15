@@ -164,7 +164,7 @@ function salvar(){
 
     if (((hora=="00")&&(minuto=="00"))&&((segundo=="00")&&(milisegundo=="000"))){
         window.alert("Não será possível salvar\nVocê não iniciou um novo atendimento.")       
-    } else{
+    } else{        
         pause();  
         let notificacao = document.getElementById("notificação")
         notificacao.innerHTML = '<div class="alert alert-success" role="alert"> Salvo com sucesso! </div>'
@@ -177,8 +177,10 @@ function salvar(){
         //Para o botão sumir após salvar
         var salvar = document.getElementById('salvar')
         salvar.innerHTML=""
+        
     }
 
+    
 
     
 }
@@ -237,3 +239,20 @@ function timer() {
 function returnData(input) {
   return input >= 10 ? input : `0${input}`
 }
+
+
+
+
+/// ATENÇÃO - ESSA PARTE DO CÓDIGO SERVE PARA SALVAR OS DADOS NA PLANILHA
+fetch("https://api.apispreadsheets.com/data/Tl5UpsV6Q80OgoKm/", {
+	method: "POST",
+	body: JSON.stringify({"data": {"bfp":"","numero":"","contato":"","cadastro":"","descricao":"","prot_retorno":"","prot_atendimento":""}}),
+}).then(res =>{
+	if (res.status === 201){
+		// SUCCESS
+	}
+	else{
+		// ERROR
+	}
+})
+

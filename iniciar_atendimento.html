@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,7 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    
+
     <!-- Including Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -28,29 +29,33 @@
 
 
 <body onload="reset()" onmousemove="atualizar_nome()">
-    <div id="saudacao">Operador(a) ..</div> 
+    <div id="saudacao">Operador(a) ..</div>
     <div id="notificação"></div>
 
     <div id="cronometro">
-        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span
+            id="millisecond">000</span>
     </div>
-    
-    <div id="atendimento"> 
-        <input class="campo" type="text" id="cadastro" placeholder="Cadastro do Cliente"> <br>
-        <input class="campo" type="text" id="bfp" placeholder="BFP" value="Padrão Fibra"> 
-        <input class="campo" type="text" id="contato" placeholder="Nome do Contato">
-        <input class="campo" type="tel" id="numero" placeholder="(00) 91234-5678" > 
-        <br>
-        <textarea class="campo" name="descricao" id="descricao" cols="80" rows="10" placeholder="Digite aqui o que houve no atendimento.."></textarea> <br>
+
+
+    <div id="atendimento">
+        <input class="campo" type="text" name="cadastro" id="cadastro" placeholder="Cadastro do Cliente"> <br>
+        <input class="campo" type="text" name="bfp" id="bfp" placeholder="BFP" value="Padrão Fibra">
+        <input class="campo" type="text" name="contato" id="contato" placeholder="Nome do Contato">
+        <input class="campo" type="tel" name="numero" id="numero" placeholder="(00) 91234-5678"> <br>
+        <textarea class="campo" name="descricao" id="descricao" cols="80" rows="10"
+            placeholder="Digite aqui o que houve no atendimento.."></textarea> <br>
+
         <div id="protocolos">
-            <input id="prot_retorno" class="campo"  type="number" placeholder="Prot. referente">
-            <input id="prot_atendimento" class="campo" type="number" placeholder="Prot. do atendimento">
+            <input name="prot_retorno" id="prot_retorno" class="campo" type="number" placeholder="Prot. referente">
+            <input name="prot_atendimento" id="prot_atendimento" class="campo" type="number"
+                placeholder="Prot. do atendimento">
         </div>
 
 
 
         <div id="classificação">
-            <p style="color: white;">Classificação Nível 1:</p> 
+            <p style="color: white;">Classificação Nível 1:</p>
             <select id="classificacao_1" name="nivel1" class="campo" onchange="classificacao_1()">
                 <option value=""> </option>
                 <option value="1 - Sem contato ou inconclusivo">1 - Sem contato ou inconclusivo</option>
@@ -62,45 +67,44 @@
                 <option value="7 - Suporte - Radio">7 - Suporte - Radio</option>
                 <option value="8 - Vendas">8 - Vendas</option>
                 <option value="9 - Serviços">9 - Serviços</option>
-                <option value="10 - Exclusivos Chat ou sistema Indisponivel">10 - Exclusivos Chat ou sistema Indisponivel</option>
-                <option value="11 - Cancelamento">11 - Cancelamento</option>        
+                <option value="10 - Exclusivos Chat ou sistema Indisponivel">10 - Exclusivos Chat ou sistema
+                    Indisponivel</option>
+                <option value="11 - Cancelamento">11 - Cancelamento</option>
             </select>
-            
+
             <div id="classificacao_2">
-                <br><p style="color: white;">Classificação Nível 2:</p>
+                <br>
+                <p style="color: white;">Classificação Nível 2:</p>
                 <select id="classificacao_2_" name="nivel2" class="campo">
                     <option value=""> </option>
                 </select>
             </div>
 
-            <br><p style="color: white;">Nível de dificuldade:</p>
+            <br>
+            <p style="color: white;">Nível de dificuldade:</p>
             <select id="dificuldade" name="dificuldade" class="campo">
                 <option value=""> </option>
                 <option value="Comum">Comum</option>
                 <option value="Médio">Médio</option>
                 <option value="Complexo">Complexo</option>
             </select>
-            
+
         </div>
+
+
 
         <div id="botoes">
             <span id="novo">
-                <button name="novo" type="button" class="btn btn-info" onclick="novo()" >Novo</button>
-            </span>            
-            <button name="copiar" type="button" class="btn btn-info" onclick="copiar()" >Copiar</button>
-            <span id="salvar">
-                <button name="salvar" type="button" class="btn btn-info" onclick="salvar()" >Salvar</button>
+                <button name="novo" type="button" class="btn btn-info" onclick="novo()">Novo</button>
             </span>
-            <button name="apagar" type="button" class="btn btn-info" onclick="apagar()" >Apagar</button>
+            <button name="copiar" type="button" class="btn btn-info" onclick="copiar()">Copiar</button>
+            <span id="salvar">
+                <button name="salvar" type="button" class="btn btn-info" onclick="salvar()">Salvar</button>
+            </span>
+            <button name="apagar" type="button" class="btn btn-info" onclick="apagar()">Apagar</button>
         </div>
 
     </div>
-
-
-
-
-
-
 
 
     <script src="funcoes/js_inicar_atendimento.js"></script>

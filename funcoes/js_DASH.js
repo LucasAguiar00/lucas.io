@@ -14,7 +14,7 @@ function logout(){
 
     setTimeout(function(){
         window.location.href = "index.html"
-    }, 5000); 
+    }, 3000); 
     
 }
 

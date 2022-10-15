@@ -70,9 +70,18 @@ body{
 
 #botoes{    
     position: absolute;
-    right: 0%;
     top: 200%;
+    right: 50%;
+    transform: translate(50%, 50%);
 }
+
+/*
+#classificação{
+    position: absolute;    
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}*/
 
 #classificacao_1{
     width: 100%;
