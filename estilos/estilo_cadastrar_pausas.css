@@ -1,0 +1,27 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('../imagens/fundo_login.jpg'); 
+}
+
+#saudacao{
+    text-align: left;
+    font-size: 26pt;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 4px;
+    color: rgb(255, 255, 255);
+    text-decoration: overline rgb(255, 255, 255);
+}
+
+
+#todas_as_pausas{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    font-size: 17pt;
+    transform: translate(-50%, -50%);
+    display: block;
+    align-items: center;
+    text-align: right;
+    
+}

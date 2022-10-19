@@ -1,0 +1,91 @@
+
+body{
+    background-image: url('../imagens/fundo_login.jpg');
+}
+
+#saudacao{
+    text-align: left;
+    font-size: 26pt;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 4px;
+    text-decoration: overline rgb(238, 255, 0);
+    color: rgb(255, 255, 255);
+}
+
+#cronometro{
+    text-align: right;
+    font-size: 18pt;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 4px;
+    text-decoration: overline rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+#atendimento{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    display: block;
+    align-items: center;
+/*    border: 2px solid rgb(238, 255, 0);*/
+
+}
+
+.campo{
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#cadastro{
+    width: 100%;
+}
+
+#bfp{
+    width: 100%;
+}
+
+#contato{
+    width: 68%;
+}
+
+#numero{
+    position: absolute;
+    right: 0%;
+}
+
+#protocolos{
+    position: absolute;
+    right: 0%;
+}
+
+#classificação{
+    position: absolute;
+    left: 0%;
+    top: 115%;
+}
+
+#botoes{    
+    position: absolute;
+    top: 200%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+
+/*
+#classificação{
+    position: absolute;    
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}*/
+
+#classificacao_1{
+    width: 100%;
+}
+#classificacao_2_{
+    width: 100%;
+}
