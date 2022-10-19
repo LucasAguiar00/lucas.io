@@ -174,14 +174,12 @@ function salvar(){
             });
         }, 2000);
 
+
         //Para o botão sumir após salvar
         var salvar = document.getElementById('salvar')
         salvar.innerHTML=""
         
     }
-
-    
-
     
 }
 
@@ -255,4 +253,11 @@ fetch("https://api.apispreadsheets.com/data/Tl5UpsV6Q80OgoKm/", {
 		// ERROR
 	}
 })
+
+
+// MENSAGEM DE NOVO ATENDIMENTO
+/*
+window.onload = function() {
+    alert('Clique em Novo\nPara iniciar o atendimento.')
+} */
 
