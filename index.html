@@ -16,47 +16,45 @@
 </body>
 
 <script>
-    const endpoint = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+const endpoint = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+const apiKey = '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';
 
-    function resposta(){
-        const input = document.getElementById('user-input').value;
-        generateResponse(input)
-    }
+async function generateResponse(prompt) {
+  const response = await fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({
+      'prompt': prompt,
+      'max_tokens': 100,
+      'temperature': 0.7,
+    })
+  });
 
-    async function generateResponse(prompt) {
-        const response = await fetch(endpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                'prompt': prompt,
-                'max_tokens': 100,
-                'temperature': 0.7,
-            })
-        });
+  const data = await response.json();
+  return data.choices[0].text.trim();
+}
 
-        const data = await response.json();
-        return data.choices[0].text.trim();
-    }
+async function sendMessage() {
+  const input = document.getElementById('user-input').value;
+  const chatbox = document.getElementById('chatbox');
 
-    async function sendMessage() {
-        const input = document.getElementById('user-input').value;
-        const chatbox = document.getElementById('chatbox');
+  // Exibir a entrada do usuário na caixa de chat
+  const userInput = document.createElement('p');
+  userInput.innerHTML = `<strong>Você:</strong> ${input}`;
+  chatbox.appendChild(userInput);
 
-        // Exibir a entrada do usuário na caixa de chat
-        const userInput = document.createElement('p');
-        userInput.innerHTML = `<strong>Você:</strong> ${input}`;
-        chatbox.appendChild(userInput);
+  // Enviar a solicitação para a API do OpenAI
+  const response = await generateResponse(input);
 
-        // Enviar a solicitação para o OpenAI Playground
-        const response = await generateResponse(input);
+  // Exibir a resposta do GPT-3 na caixa de chat
+  const gptResponse = document.createElement('p');
+  gptResponse.innerHTML = `<strong>GPT-3:</strong> ${response}`;
+  chatbox.appendChild(gptResponse);
+}
 
-        // Exibir a resposta do GPT-3 na caixa de chat
-        const gptResponse = document.createElement('p');
-        gptResponse.innerHTML = `<strong>GPT-3:</strong> ${response}`;
-        chatbox.appendChild(gptResponse);
-    }
 
 </script>
 
